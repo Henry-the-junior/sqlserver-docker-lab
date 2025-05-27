@@ -1,13 +1,12 @@
-version: '3.9'
 services:
   sqlserver:
-    image: mcr.microsoft.com/mssql/server:2022-latest
+    image: mcr.microsoft.com/mssql/server:2022-CU10-ubuntu-20.04
     container_name: sqlserver2022
     ports:
       - "1433:1433"
     environment:
       - ACCEPT_EULA=Y
-      - SA_PASSWORD=YourStrong@Passw0rd
+      - SA_PASSWORD=${SA_PASSWORD}
     volumes:
       - ./data:/var/opt/mssql/data
     restart: unless-stopped
