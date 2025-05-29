@@ -82,7 +82,7 @@ inet 172.21.90.85/20 ...
 
 ### 🔁 將 WSL SQL Server 轉發到 Windows `localhost:1433`（portproxy）
 
-在 **Windows PowerShell（以系統管理員執行）**中設定 port forwarding：
+在 Windows PowerShell (以系統管理員執行) 中設定 port forwarding：
 
 ```powershell
 netsh interface portproxy delete v4tov4 listenport=1433 listenaddress=0.0.0.0
